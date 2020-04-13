@@ -12,8 +12,3 @@ RunTest('msvc-14.1', '32', 'develop')
 RunTest('msvc-14.1', '64', 'develop')
 RunTest('msvc-14.2', '32', 'develop')
 RunTest('msvc-14.2', '64', 'develop')
-
-RunTest('msvc-14.1', '32', 'master')
-RunTest('msvc-14.1', '64', 'master')
-RunTest('msvc-14.2', '32', 'master')
-RunTest('msvc-14.2', '64', 'master')
