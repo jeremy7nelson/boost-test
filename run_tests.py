@@ -1,19 +1,17 @@
 #!/usr/bin/env python
 import os
 
-def RunTest(toolset, addressModel, branch):
-    runner = '--runner=BI-{toolset}-{addressModel} '.format(toolset=toolset, addressModel=addressModel)
+def RunTest(toolset, branch):
+    runner = '--runner=BI-{} '.format(toolset)
     toolsets = '--toolsets={} '.format(toolset)
-    bjamOptions = '"--bjam-options=-j8 address-model={}" '.format(addressModel)
     tag = '--tag={} '.format(branch)
-    os.system('python run.py ' + runner + toolsets + bjamOptions + tag + '--comment=info.html')
+    os.system('python run.py ' + runner + toolsets + '--bjam-options=-j8 ' + tag + '--comment=info.html')
 
-RunTest('msvc-14.1', '32', 'develop')
-RunTest('msvc-14.1', '64', 'develop')
-RunTest('msvc-14.2', '32', 'develop')
-RunTest('msvc-14.2', '64', 'develop')
-
-RunTest('msvc-14.1', '32', 'master')
-RunTest('msvc-14.1', '64', 'master')
-RunTest('msvc-14.2', '32', 'master')
-RunTest('msvc-14.2', '64', 'master')
+RunTest('clang-6.0', 'develop')
+RunTest('clang-7', 'develop')
+RunTest('clang-8', 'develop')
+RunTest('clang-9', 'develop')
+RunTest('clang-10', 'develop')
+RunTest('gcc-8', 'develop')
+RunTest('gcc-9', 'develop')
+RunTest('gcc-10', 'develop')
