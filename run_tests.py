@@ -7,7 +7,6 @@ def RunTest(toolset, branch):
     tag = '--tag={} '.format(branch)
     os.system('python run.py ' + runner + toolsets + '--bjam-options=-j8 ' + tag + '--comment=info.html')
 
-RunTest('clang-6.0', 'develop')
 RunTest('clang-7', 'develop')
 RunTest('clang-8', 'develop')
 RunTest('clang-9', 'develop')
