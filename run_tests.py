@@ -10,6 +10,7 @@ def RunTest(toolset, branch):
 RunTest('clang-9', 'develop')
 RunTest('clang-10', 'develop')
 RunTest('clang-11', 'develop')
+RunTest('clang-12', 'develop')
 RunTest('gcc-8', 'develop')
 RunTest('gcc-9', 'develop')
 RunTest('gcc-10', 'develop')
