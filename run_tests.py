@@ -8,9 +8,9 @@ def RunTest(toolset, branch):
     os.system('python run.py ' + runner + toolsets + '--bjam-options=-j8 ' + tag + '--comment=info.html')
 
 RunTest('clang-9', 'develop')
-RunTest('clang-10', 'develop')
 RunTest('clang-11', 'develop')
 RunTest('clang-12', 'develop')
-RunTest('gcc-8', 'develop')
+RunTest('clang-13', 'develop')
 RunTest('gcc-9', 'develop')
 RunTest('gcc-10', 'develop')
+RunTest('gcc-11', 'develop')
